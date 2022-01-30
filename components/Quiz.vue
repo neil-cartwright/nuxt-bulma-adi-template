@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="quiz has-text-centered" v-if="!endOfTest">
+    <div class="quiz has-text-centered" v-if="!getResults">
       <h1 class="title is-size-6 has-background-warning py-2">
         Question {{ questionNumber + 1 }}:
         {{ questions[questionNumber].question }}
@@ -69,31 +69,29 @@
         <div class="level-item" v-if="showNext">
           <button class="button is-text" @click="nextQuestion">Next</button>
         </div>
+        <div class="level-item" v-if="endOfTest">
+          That's the end of the test.
+          <button class="button is-text" @click="showTheResults">
+            Get the results.
+          </button>
+        </div>
       </div>
     </div>
     <div v-else>
       <!-- end of test screen -->
-      <div class="content has-text-centered">
-        <div>
-          <p class="tag is-warning is-large my-2">
-            You scored {{ score }} out of {{ questions.length }}
-          </p>
-          <br />
-          <p class="tag is-success is-large" v-if="score == questions.length">
-            Very Good
-          </p>
-          <p
-            class="tag is-orange has-text-white is-large"
-            v-else-if="score < questions.length && score > questions.length - 2"
-          >
-            Nice
-          </p>
-          <p class="tag is-danger is-large" v-else>Better luck next time</p>
-          <br />
-          <button class="button is-medium is-success" @click="initTest()">
-            Try again
-          </button>
-        </div>
+      <div class="notification is-info has-text-centered">
+        <p>You scored {{ score }} out of {{ questions.length }}</p>
+      </div>
+      <div class="notification is-danger has-text-centered">
+        <p v-if="score <= 1">hard luck</p>
+        <p v-if="score == 2">not bad</p>
+        <p v-if="score == 3">well done</p>
+      </div>
+      <div
+        class="notification is-success has-text-centered try-again"
+        @click="initTest()"
+      >
+        <p>Try again</p>
       </div>
     </div>
   </div>
@@ -116,6 +114,7 @@ export default {
       theCorrectAnswer: "",
       showNext: false,
       endOfTest: false,
+      getResults: false,
     };
   },
   computed: {},
@@ -132,7 +131,9 @@ export default {
       this.showNext = false;
       this.hasMadeASelection = false;
       this.hasSubmittedAnswer = false;
-      (this.checkAnswerAlert = false), (this.gotTheAnswerRight = false);
+      this.getResults = false;
+      this.checkAnswerAlert = false;
+      this.gotTheAnswerRight = false;
       document.querySelectorAll(".is-incorrect").forEach((el) => {
         el.classList.remove("is-incorrect");
       });
@@ -199,6 +200,9 @@ export default {
       }
     },
 
+    showTheResults() {
+      this.getResults = true;
+    },
     // helpers
     toggleTheClass(theClass, theEventObject) {
       let x = document.querySelectorAll("." + theClass);
@@ -258,5 +262,9 @@ li.is-the-correct-answer a {
   color: $white;
   animation: pulse;
   animation-duration: 2s;
+}
+.try-again:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 </style>

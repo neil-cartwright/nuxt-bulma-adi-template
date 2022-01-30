@@ -8,12 +8,12 @@
           <div
             class="column is-6 is-flex is-flex-direction-column is-justify-content-center is-align-items-start"
           >
-            <p class="title is-size-1 has-text-white">Driving School 1.0</p>
+            <p class="title is-size-1 has-text-white">Driving School</p>
             <p class="subtitle has-text-white">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio,
-              itaque distinctio dolorem quam sint magnam officiis eius.
-              Voluptate expedita harum nulla sunt praesentium fugit. Quas
-              dolores similique dicta iure voluptatum?
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+              nihil ipsam maxime ducimus et! Eos consequatur optio quo nesciunt
+              delectus, voluptas eum tempore, explicabo consectetur, rerum
+              dignissimos quos quia illum.
             </p>
             <NuxtLink
               to="/contact"
@@ -54,7 +54,7 @@ export default {
   }
 }
 .logo img {
-  opacity: 0.4;
+  opacity: 0.1;
 }
 .overlay {
   position: absolute;
@@ -72,14 +72,11 @@ export default {
   top: 0;
   bottom: 0;
   background: url("~/assets/images/patterns/Waiau.svg");
-  background-size: cover;
+  background-size: contain;
   background-position: left top;
   filter: blur(8px) opacity(40%);
 }
 .button {
   border: none;
-}
-* {
-  // outline: 1px solid red;
 }
 </style>
