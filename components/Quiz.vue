@@ -30,7 +30,7 @@
           @click="selectAnswer($event)"
           :class="isTheCorrectAnswer(answer)"
         >
-          <a class="button is-fullwidth is-small my-1">{{ answer }}</a>
+          <a class="button is-small my-1">{{ answer }}</a>
         </li>
       </ul>
       <br />

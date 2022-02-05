@@ -1,8 +1,8 @@
 n
 <template>
-  <footer class="footer">
-    <div class="content has-text-centered">
-      <p><strong>Sitepages</strong> ADI Templates {{ date.getFullYear() }}</p>
+  <footer class="footer has-background-dark">
+    <div class="has-text-white">
+      <p>Sitepages | ADI Templates {{ date.getFullYear() }}</p>
     </div>
   </footer>
 </template>
@@ -15,3 +15,12 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+footer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+</style>

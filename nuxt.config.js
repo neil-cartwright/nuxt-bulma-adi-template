@@ -12,6 +12,8 @@ export default {
     title: "adi-template-1.0",
     htmlAttrs: {
       lang: "en",
+    },
+    bodyAttrs: {
       class: "has-navbar-fixed-top",
     },
     meta: [
@@ -29,7 +31,7 @@ export default {
       },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;700&family=Source+Sans+Pro:wght@200;600;900&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;0,900;1,300&display=swap",
       },
     ],
     script: [
@@ -48,16 +50,14 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: "~/plugins/vue-easy-slider.js", mode: "client" },
-    { src: "~/plugins/v-tooltip", mode: "client" },
     { src: "~/plugins/aos.client.js", mode: "client" },
     { src: "~/plugins/vue-glide.js" },
-    { src: "~/plugins/headroom.client.js" },
-    { src: "~/plugins/vue-parallaxy.client.js" },
+    { src: "~/plugins/headroom.client.js", mode: "client" },
+    { src: "~/plugins/vue-parallaxy.client.js", mode: "client" },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: false,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: ["@nuxtjs/style-resources"],

@@ -6,8 +6,14 @@
   </div>
 </template>
 <script>
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 export default {
   layout: "default",
+  components: {
+    Nav,
+    Footer,
+  },
   transition: {
     name: "home",
     mode: "out-in",

@@ -4,63 +4,70 @@
     data-aos="fade-zoom-in"
     data-aos-offset="100"
     data-aos-easing="ease-in-sine"
-    data-aos-duration="100"
+    data-aos-duration="1000"
   >
     <div class="container">
       <div class="tile is-ancestor">
-        <div class="tile is-vertical is-9">
+        <!-- ancestor -->
+        <div class="tile is-vertical is-8">
+          <!-- left 2/3 -->
           <div class="tile">
+            <!-- top left tile -->
             <div class="tile is-parent is-vertical">
-              <article class="tile is-child notification is-light">
+              <!-- quiz -->
+              <article class="tile notification is-child is-light">
                 <Quiz />
               </article>
+              <!-- contact details -->
               <article
-                class="tile is-child notification is-warning has-text-centered"
+                class="tile is-child notification has-background-light has-text-centered"
               >
-                <h1 class="title is-size-6">Book a lesson!</h1>
-                <p>Call on <a href="#">01234 567 890</a></p>
-                <p>Email: <a href="#">info@drivingschool.com</a></p>
+                <ContactDetails />
               </article>
             </div>
-            <div class="tile is-parent">
-              <article class="tile is-child notification is-light">
-                <Tabs> </Tabs>
+            <!-- tabs not on tablet, as causing margins to clash -->
+            <div class="tile is-parent is-hidden-tablet-only">
+              <article class="tile notification is-child is-light">
+                <Tabs />
               </article>
             </div>
           </div>
           <div class="tile is-parent">
-            <article class="tile is-child notification p-0">
+            <article class="tile is-child p-0">
               <Map />
             </article>
           </div>
         </div>
-        <div class="tile is-parent">
-          <article class="tile is-child notification is-success">
-            <div class="content">
-              <h1 class="title is-size-6">Lorem Ipsum</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
-                fugit doloribus, accusantium non suscipit deserunt fuga
-                officiis, soluta aperiam ullam porro reprehenderit quisquam.
-                Quod beatae minus sit quisquam non magnam?
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Similique optio dolorum sequi nobis accusamus animi! Similique
-                saepe vero, autem itaque commodi aliquam rem architecto
-                dignissimos non unde impedit assumenda animi!
-              </p>
-            </div>
+
+        <div class="tile is-parent is-vertical">
+          <article class="tile notification is-child is-light">
+            <Specials />
+          </article>
+          <article class="tile is-child">
+            <Signs />
           </article>
         </div>
       </div>
     </div>
   </section>
 </template>
+
 <script>
+import Quiz from "@/components/Quiz";
+import Specials from "@/components/Specials";
+import Tabs from "@/components/Tabs";
+import ContactDetails from "@/components/ContactDetails";
+import Signs from "@/components/Signs";
+import Map from "@/components/Map";
+
 export default {
-  data() {
-    return {};
+  components: {
+    Quiz,
+    Specials,
+    Tabs,
+    Signs,
+    ContactDetails,
+    Map,
   },
 };
 </script>

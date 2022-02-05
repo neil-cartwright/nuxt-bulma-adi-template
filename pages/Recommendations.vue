@@ -1,44 +1,46 @@
 <template>
   <div>
-    <div class="container">
-      <section class="section">
+    <section class="section">
+      <div class="container">
         <div class="columns">
           <div class="column is-6">
             <vue-glide :per-view="1">
               <vue-glide-slide v-for="(n, idx) in 10" :key="idx">
                 <div class="content">
                   <blockquote class="is-clearfix">
-                    <h3 class="title is-size-6">lorem Ipsum</h3>
+                    <h3 class="title is-size-6">Recommendations</h3>
                     <p>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Esse ab eaque ut provident sunt iste vero eum minima
-                      commodi. A hic earum ab eos blanditiis unde, dignissimos
-                      officiis repellat rerum!
+                      If you have a library of recommendations from previous
+                      customers you can place them here, in this carousel. As
+                      your business grows you can send new updated content to
+                      your web designer who will update the site, and improve
+                      your SEO.
                     </p>
-                    <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Nemo et harum eum commodi, incidunt dicta pvoluptate
-                      accusamus similique blanditiis, facere, odit ullam fugit
-                      excepturi quae dolorem hic! Consectetur, quia asperiores.
-                    </p>
+
                     <p class="is-pulled-right has-text-weight-bold">
-                      Lorem, Ipsum 2022
+                      Neil, London. 2022
                     </p>
                   </blockquote>
                 </div>
               </vue-glide-slide>
               <template slot="control">
-                <button class="button my-2 mx-1" data-glide-dir="<<">
-                  start
+                <button class="button mx-2" data-glide-dir="<<">
+                  <span class="icon">
+                    <i class="fad fa-fast-backward"></i>
+                  </span>
                 </button>
-                <button class="button my-2 mx-1" data-glide-dir="<">
-                  prev
+                <button class="button mx-2" data-glide-dir="<">
+                  <span class="icon">
+                    <i class="fad fa-backward"></i>
+                  </span>
                 </button>
-                <button class="button my-2 mx-1" data-glide-dir=">">
-                  next
+                <button class="button mx-2" data-glide-dir=">">
+                  <span class="icon"><i class="fad fa-forward"></i></span>
                 </button>
-                <button class="button my-2 mx-1" data-glide-dir=">>">
-                  end
+                <button class="button mx-2" data-glide-dir=">>">
+                  <span class="icon">
+                    <i class="fad fa-fast-forward"></i>
+                  </span>
                 </button>
               </template>
             </vue-glide>
@@ -50,8 +52,8 @@
             />
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </div>
 </template>
 <script>

@@ -1,3 +1,18 @@
-* {
-  // outline: 1px solid red;
+.h {
+  outline: 1px solid red;
+}
+
+.has-text-navy {
+  color: $navy;
+}
+.has-background-navy,
+.is-navy {
+  background: $navy;
+}
+.has-text-orange {
+  color: $orange;
+}
+.has-background-orange,
+.is-orange {
+  background: $orange;
 }

@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
+  <div class="container" data-aos="fade-zoom-in" data-aos-duration="1000">
     <div class="box">
       <vue-glide
-        :perView="3"
+        :perView="4"
         :rewind="false"
         type="carousel"
         :breakpoints="{
@@ -12,8 +12,10 @@
         }"
       >
         <vue-glide-slide v-for="i in 10" :key="i">
-          <div class="notification">
-            <h1 class="title is-size-6">Pass picture {{ i }}</h1>
+          <div class="message is-light p-0">
+            <div class="message-header">
+              <h1 class="title is-size-6">Pass picture {{ i }}</h1>
+            </div>
             <figure class="image is-4by3">
               <img
                 v-if="i % 2 == 0"
@@ -29,10 +31,24 @@
           </div>
         </vue-glide-slide>
         <template slot="control">
-          <button class="button mx-2" data-glide-dir="<<">start</button>
-          <button class="button mx-2" data-glide-dir="<">prev</button>
-          <button class="button mx-2" data-glide-dir=">">next</button>
-          <button class="button mx-2" data-glide-dir=">>">end</button>
+          <button class="button mx-2" data-glide-dir="<<">
+            <span class="icon">
+              <i class="fad fa-fast-backward"></i>
+            </span>
+          </button>
+          <button class="button mx-2" data-glide-dir="<">
+            <span class="icon">
+              <i class="fad fa-backward"></i>
+            </span>
+          </button>
+          <button class="button mx-2" data-glide-dir=">">
+            <span class="icon"><i class="fad fa-forward"></i></span>
+          </button>
+          <button class="button mx-2" data-glide-dir=">>">
+            <span class="icon">
+              <i class="fad fa-fast-forward"></i>
+            </span>
+          </button>
         </template>
       </vue-glide>
     </div>
@@ -50,7 +66,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 div[data-glide-el="controls"] {
   display: flex;
   align-items: center;
@@ -58,7 +74,7 @@ div[data-glide-el="controls"] {
   border-top: 1px solid #e8e8e8;
   margin-top: 1em;
 }
-* {
-  /* outline: 1px solid red; */
+button:hover .icon {
+  // color: $dark;
 }
 </style>

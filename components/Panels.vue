@@ -11,10 +11,11 @@
         >
           <div class="card">
             <div class="card-header">
-              <div class="card-header-title">Driving Instructor</div>
+              <div class="card-header-title">Driving Instructor Websites</div>
             </div>
+
             <div class="card-image">
-              <figure class="image is-4by3">
+              <figure class="image">
                 <img
                   :src="require(`~/assets/images/theme/examiner-and-pupil.svg`)"
                   alt="Placeholder image"
@@ -23,10 +24,9 @@
             </div>
             <div class="card-content">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
-                eos assumenda dolore, iure possimus tenetur beatae, dolorum
-                pariatur et veniam rerum facilis deserunt nulla quis at!
-                Dignissimos animi obcaecati mollitia.
+                Professional websites helping busy ADIs reach their customers.
+                Site content created and updated by working ADI and Writing and
+                Publishing graduate.
               </p>
             </div>
           </div>
@@ -41,26 +41,28 @@
         >
           <div class="card">
             <div class="card-header">
-              <div class="card-header-title">DVSA Approved</div>
+              <div class="card-header-title">SEO friendly</div>
             </div>
             <div class="card-image">
               <figure class="image">
                 <img
-                  :src="require(`~/assets/images/theme/dvla-form.jpg`)"
+                  :src="require(`~/assets/images/theme/dvsa-form.jpg`)"
                   alt="Placeholder image"
                 />
               </figure>
             </div>
             <div class="card-content">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
-                eos assumenda dolore, iure possimus tenetur beatae, dolorum
-                pariatur et veniam rerum facilis deserunt nulla quis at!
-                Dignissimos animi obcaecati mollitia.
+                All sites are interactive and responsive, look great on the most
+                popular handheld phones and tablets as well as desktop PCs.
+                Interactive quiz widgets with topical questions are included.
+                SEO friendly designed for maximum content exposure to search
+                engines.
               </p>
             </div>
           </div>
         </div>
+
         <div
           class="column is-4"
           data-aos="fade-zoom-in"
@@ -70,7 +72,7 @@
         >
           <div class="card">
             <div class="card-header">
-              <div class="card-header-title">Get your licence</div>
+              <div class="card-header-title">Designed for impact</div>
             </div>
             <div class="card-image">
               <figure class="image">
@@ -83,10 +85,11 @@
             </div>
             <div class="card-content">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
-                eos assumenda dolore, iure possimus tenetur beatae, dolorum
-                pariatur et veniam rerum facilis deserunt nulla quis at!
-                Dignissimos animi obcaecati mollitia.
+                5 free professional stock images with each site or use your own
+                great photos and graphics. Images optimised for fast download
+                speeds and meta data supplied for SEO. Intuitive and seamless
+                <abbr title="single page application">SPA</abbr> style
+                navigation. Logo design available.
               </p>
             </div>
           </div>
@@ -99,5 +102,8 @@
 <style lang="scss">
 .card-header-title {
   background: #e8e8e8;
+}
+.card {
+  min-height: 100%;
 }
 </style>
